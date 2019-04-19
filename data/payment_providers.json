@@ -7731,7 +7731,8 @@
       "aggregating"
     ],
     "payment_method": [
-      "visa2",
+      "payment_card",
+      "visa",
       "cashu",
       "bancontactmistercash",
       "cartebancaires",
