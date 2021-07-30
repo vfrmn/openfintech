@@ -15,6 +15,7 @@ push_files() {
     git push origin master
   fi
 }
+
 build_meta() {
   mkdir -p metadata && cd metadata && php ../etc/metadata-build.php && cd - && mv metadata /tmp/ && cd /tmp \
   && git clone git@github.com:vfrmn/meta.git  \
