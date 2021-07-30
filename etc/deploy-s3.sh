@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -ex
 
+echo "$TRAVIS_TAG";
+echo "$TRAVIS_BRANCH";
+echo "$TRAVIS_COMMIT";
 if [ ! -z "$TRAVIS_TAG" ]; then
   LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
   FILES=()
@@ -9,6 +12,7 @@ if [ ! -z "$TRAVIS_TAG" ]; then
       FILES+=( "$i" )
   done
   echo "${FILES[@]}"
+
 
   CMDS=()
   for i in "${FILES[@]}"; do
