@@ -12,8 +12,7 @@ build_documentation
 git config --global user.email "actions@github.com"
 git config --global user.name "Github Actions"
 git add .
-if ! (git status | grep -q "nothing to commit");
-then
+if ! (git status | grep -q "nothing to commit"); then
   git commit --message "Github actions build: ${BUILD_NUMBER}"
   git push origin master
 fi

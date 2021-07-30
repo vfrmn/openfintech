@@ -16806,8 +16806,8 @@
     "code": "ecascad",
     "vendor": "ecascad",
     "name": {
-      "en": "e.Cascad",
-      "ru": "e.Cascad",
+      "en": "e.Cascad",,
+      "ru": "e.Cascad"
       "uk": "e.Cascad"
     },
     "payout_method": [
