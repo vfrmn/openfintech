@@ -16209,6 +16209,16 @@
   },
   {
     "status": "active",
+    "code": "kyivstar_contract_number",
+    "category": "telecommunications",
+    "name": {
+      "en": "Kyivstar (contract)",
+      "uk": "Київстар (контракт)",
+      "ru": "Киевстар (контракт)"
+    }
+  },
+  {
+    "status": "active",
     "code": "vodafone_contract",
     "category": "telecommunications",
     "name": {
@@ -23891,6 +23901,16 @@
       "en": "Tether (Deprecated)",
       "uk": "Tether (Deprecated)",
       "ru": "Tether (Deprecated)"
+    }
+  },
+  {
+    "status": "active",
+    "code": "xpate",
+    "category": "payment_card",
+    "name": {
+      "en": "Xpate",
+      "ru": "Xpate",
+      "uk": "Xpate"
     }
   }
 ]
