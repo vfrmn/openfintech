@@ -16209,6 +16209,16 @@
   },
   {
     "status": "active",
+    "code": "kyivstar_contract_number",
+    "category": "telecommunications",
+    "name": {
+      "en": "Kyivstar (contract)",
+      "uk": "Київстар (контракт)",
+      "ru": "Киевстар (контракт)"
+    }
+  },
+  {
+    "status": "active",
     "code": "vodafone_contract",
     "category": "telecommunications",
     "name": {
