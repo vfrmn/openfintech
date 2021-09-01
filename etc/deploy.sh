@@ -9,8 +9,7 @@ setup_git() {
 
 push_files() {
   git add .
-  if ! (git status | grep -q "nothing to commit");
-  then
+  if ! (git status | grep -q "nothing to commit"); then
     git commit --message "Github actions build: ${BUILD_NUMBER}"
     git push origin master
     git push origin master
