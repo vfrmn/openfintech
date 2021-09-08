@@ -8,14 +8,6 @@
     "sub_region": "northern_africa"
   },
   {
-    "code": "AS",
-    "name": "American Samoa",
-    "code_alpha3": "ASM",
-    "code_alpha3_numeric": "016",
-    "region": "oceania",
-    "sub_region": "polynesia"
-  },
-  {
     "code": "AD",
     "name": "Andorra",
     "code_alpha3": "AND",
