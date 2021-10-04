@@ -11,13 +11,14 @@ push_files() {
   git add .
   if ! (git status | grep -q "nothing to commit"); then
     git commit --message "Github action #${GITHUB_RUN_NUMBER}: ID ${GITHUB_RUN_ID}"
+    git pull --rebase origin master
     git push origin master
   fi
 }
 
 build_meta() {
   mkdir -p metadata && cd metadata && php ../etc/metadata-build.php && cd - && mv metadata /tmp/ && cd /tmp \
-  && git clone git@github.com:openfintechio/meta.git \
+  && git clone git@github.com:vfrmn/meta.git \
   && cp metadata/* meta/data/ \
   && cd meta
 }
