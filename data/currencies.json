@@ -31,21 +31,6 @@
     "status": "active"
   },
   {
-    "code": "EUR",
-    "name": {
-      "en": "Euro"
-    },
-    "type": "national",
-    "iso_numeric3_code": "978",
-    "iso_alpha3_code": "EUR",
-    "symbol": "€",
-    "native_symbol": "€",
-    "exponent": 2,
-    "category": "other",
-    "parent_currency_multiplier": 1,
-    "status": "active"
-  },
-  {
     "code": "USD",
     "name": {
       "en": "US Dollar"
