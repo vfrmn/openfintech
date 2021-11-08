@@ -31,22 +31,6 @@
     "status": "active"
   },
   {
-    "code": "WMH",
-    "parent_code": "BCH",
-    "vendor": "webmoney",
-    "name": {
-      "en": "WMH"
-    },
-    "type": "digital",
-    "exponent": 2,
-    "category": "electronic",
-    "parent_currency_multiplier": 1,
-    "metadata": {
-      "jsons_code": "WMH"
-    },
-    "status": "active"
-  },
-  {
     "code": "EUR",
     "name": {
       "en": "Euro"
