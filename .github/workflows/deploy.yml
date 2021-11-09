@@ -1,32 +1,27 @@
 name: Deploy
 
 on:
-  workflow_run:
-    workflows:
-      - Validate
-    types:
-      - completed
+  release:
+    types: [ published ]
 
 jobs:
   deploy-metadata:
     runs-on: ubuntu-latest
-#    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v2
 
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/}
-#      - name: Add SSH Agent
-#        uses: webfactory/ssh-agent@v0.5.3
-#        with:
-#          ssh-private-key: ${{ secrets.DEPLOY_SSH_META_KEY }}
-#
-#      - name: Deploy metadata
-#        run: ./etc/deploy.sh
+      - name: Add SSH Agent
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SSH_META_KEY }}
+
+      - name: Deploy metadata
+        run: ./etc/deploy.sh
 
   deploy-docs:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v2
 
@@ -40,7 +35,6 @@ jobs:
 
   deploy-s3:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v2
 
