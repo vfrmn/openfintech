@@ -9,6 +9,7 @@ jobs:
     uses: vfrmn/openfintech/.github/workflows/validate.yml@master
 
   deploy-metadata:
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,6 +25,7 @@ jobs:
         run: ./etc/deploy.sh
 
   deploy-docs:
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -37,6 +39,7 @@ jobs:
         run: ./etc/deploy-docs.sh
 
   deploy-s3:
+    needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
