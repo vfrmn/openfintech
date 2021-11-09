@@ -1,11 +1,9 @@
 name: Deploy
 
 on:
-  workflow_run:
-    workflows:
-      - Validate
+  release:
     types:
-      - completed
+      - published
 
 jobs:
   deploy-metadata:
