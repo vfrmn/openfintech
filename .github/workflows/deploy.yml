@@ -3,11 +3,11 @@ name: Deploy
 on:
   release:
     types:
-      - published
+      - released
 
 jobs:
   validate:
-    uses: vfrmn/openfintech/.github/workflows/validate.yml@master
+    uses: vfrmn/openfintech/.github/workflows/validate.yml@bad-json
 
   deploy-metadata:
     needs: validate
