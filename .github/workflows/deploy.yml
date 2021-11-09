@@ -8,21 +8,25 @@ on:
       - completed
     tags:
       - '*'
+    branches:
+      - '!*'
 
 jobs:
   deploy-metadata:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+#    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v2
 
-      - name: Add SSH Agent
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.DEPLOY_SSH_META_KEY }}
-
-      - name: Deploy metadata
-        run: ./etc/deploy.sh
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/}
+#      - name: Add SSH Agent
+#        uses: webfactory/ssh-agent@v0.5.3
+#        with:
+#          ssh-private-key: ${{ secrets.DEPLOY_SSH_META_KEY }}
+#
+#      - name: Deploy metadata
+#        run: ./etc/deploy.sh
 
   deploy-docs:
     runs-on: ubuntu-latest
