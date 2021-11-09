@@ -6,10 +6,6 @@ on:
       - Validate
     types:
       - completed
-    tags:
-      - '*'
-    branches:
-      - '!*'
 
 jobs:
   deploy-metadata:
