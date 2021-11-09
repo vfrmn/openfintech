@@ -5,6 +5,9 @@ on:
     types: [ published ]
 
 jobs:
+  validate:
+    uses: vfrmn/openfintech/.github/workflows/validate.yml@v1
+
   deploy-metadata:
     runs-on: ubuntu-latest
     steps:
