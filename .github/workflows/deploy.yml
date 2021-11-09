@@ -6,7 +6,7 @@ on:
 
 jobs:
   validate:
-    uses: vfrmn/openfintech/.github/workflows/validate.yml@v1
+    uses: vfrmn/openfintech/.github/workflows/validate.yml@master
 
   deploy-metadata:
     runs-on: ubuntu-latest
