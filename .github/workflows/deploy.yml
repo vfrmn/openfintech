@@ -6,7 +6,7 @@ on:
       - released
 jobs:
   validate:
-    uses: openfintechio/openfintech/.github/workflows/validate.yml@master
+    uses: vfrmn/openfintech/.github/workflows/validate.yml@master
 
   deploy-metadata:
     needs: validate

@@ -18,7 +18,7 @@ push_files() {
 
 build_meta() {
   mkdir -p metadata && cd metadata && php ../etc/metadata-build.php && cd - && mv metadata /tmp/ && cd /tmp \
-  && git clone git@github.com:openfintechio/meta.git \
+  && git clone git@github.com:vfrmn/meta.git \
   && cp metadata/* meta/data/ \
   && cd meta
 }
